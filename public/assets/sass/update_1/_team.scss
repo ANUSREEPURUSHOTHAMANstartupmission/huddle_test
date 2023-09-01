@@ -1,0 +1,50 @@
+/* Team List ----------------------------------------*/
+.team-list {
+    display: flex;
+    background-color: $smoke-color;
+    padding: 30px;
+    gap: 30px;
+    .team-img {
+        min-width: 180px;
+    }
+    .team-desig {
+        margin-bottom: 8px;
+    }
+    .box-title {
+        font-weight: 600;
+    }
+    .team-text {
+        margin-bottom: 23px;
+        @include xs {
+            margin-bottom: 17px;
+        }
+    }
+    .themeholy-social {
+        a {
+            border-radius: 99px;
+            color: $title-color;
+        }
+    }
+    @include xs {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1400px) { 
+    #teamSlide4 {
+        .slick-dots {
+            position: absolute;
+            top: 43%;
+            right: -56%;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// ---------------------
+.team-img {
+    &.border-top {
+        border-top: 5px solid $theme-color !important;
+    }
+}

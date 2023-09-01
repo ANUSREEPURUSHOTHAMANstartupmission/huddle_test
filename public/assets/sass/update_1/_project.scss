@@ -1,0 +1,132 @@
+/* Project Block ---------------------------------*/
+.tab-menu1 {
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid $theme-color;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+    .tab-btn {
+        font-size: 18px;
+        font-weight: 500;
+        color: $title-color;
+        background-color: transparent;
+        border: none;
+        padding: 10px 30px;
+        &.active {
+            color: $white-color;
+        }
+    }
+    .indicator {
+        position: absolute;
+        top: var(--pos-y);
+        left: var(--pos-x);
+        width: var(--width-set);
+        height: var(--height-set);
+        background-color: $theme-color;
+        pointer-events: none;
+        transition: 0.4s ease-in-out;
+        z-index: -1;
+    }
+}
+
+@include lg {
+    .tab-menu1 {
+        margin-bottom: 45px;
+    }
+}
+
+@include sm {
+    .tab-menu1 {
+        .tab-btn {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+}
+
+.project-block {
+    height: 400px;
+    position: relative;
+    .box-content {
+        padding: 28px 27px;
+        background-color: $white-color;
+        box-shadow: 0px 6px 15px rgba(192, 192, 192, 0.20);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 445px;
+        transition: 0.4s;
+    }
+    .title-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    .box-subtitle {
+        color: $theme-color;
+        margin-bottom: 10px;
+        margin-top: -0.5em;
+    }
+    .box-title {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .box-text {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s;
+    }
+    .box-img {
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .icon-btn {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $white-color;
+    }
+}
+.project-slide-3 {
+    height: 480px;
+    .slick-track,
+    .slick-list {
+        height: 480px;
+    }
+    .slick-slide {
+        transition: 0.4s;
+        .project-block {
+            display: inline-block;
+            transition: 0.4s;
+        }
+    }
+    .slick-current {
+        width: calc(595px + 30px) !important;
+        @include lg {
+            width: calc(600px + 30px) !important;
+        }
+        @include md {
+            width: calc(390px + 30px) !important;
+        }
+        @include xs {
+            width: 100vw !important;
+        }
+        .project-block {
+            .box-img {
+                width: 100%;
+            }
+            .box-text {
+                max-height: 100px;
+                visibility: visible;
+                opacity: 1;
+                margin-top: 12px;
+            }
+        }
+    }
+}

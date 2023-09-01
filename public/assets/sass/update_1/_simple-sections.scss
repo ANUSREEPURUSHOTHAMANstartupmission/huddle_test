@@ -1,0 +1,544 @@
+/* About 4 ---------------------------------- */
+@media (min-width: 1300px) {
+    .img-box5 {
+        margin-right: 50px;
+    }
+}
+.img-box5 {
+    position: relative;
+    z-index: 2;
+    .year-counter {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #F7F2ED;
+        padding: 10px 15px;
+        &_number {
+            font-size: 44px;
+            color: $theme-color2;
+        }
+        &_title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: -2px;
+        }
+        &_text {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+.about-checklist {
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+        max-width: 480px;
+    }
+    display: flex;
+    gap: 15px;
+    text-align: left;
+    .box-icon {
+        min-width: 36px;
+    }
+    .box-text {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: -0.5em;
+    }
+    .box-title {
+        font-size: 20px;
+        margin-bottom: -0.34em;
+        font-weight: 500;
+    }
+}
+
+.call-links {
+    text-align: left;
+    @include xs {
+        text-align: center;
+    }
+    .text {
+        font-size: 14px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid;
+        line-height: 16px;
+        margin-top: -0.4em;
+    }
+    .number {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: -0.34em;
+        a {
+            color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+@include lg {
+    .about-checklist {
+        &-wrap {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .img-box5 {
+        display: inline-block;
+        .img1 {
+            display: inline-block;
+        }
+    }
+}
+
+@include xs {
+    .about-checklist {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* About v5 -----------------------------------------*/
+.about-sec5 {
+    background-size: 1690px 100%;
+    background-position: center left;
+    @include hd {
+        background-position: center center;
+    }
+}
+@media (min-width: 1300px) {
+    .img-box6 {
+        margin-right: 50px;
+    }
+}
+.img-box6 {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+    .img2 {
+        position: absolute;
+        bottom: 0;
+        left: -140px;
+        animation: movingX 8s linear infinite;
+    }
+}
+
+.checklist-img-wrap {
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@include lg {
+    .img-box6 {
+        padding-bottom: 20px;
+        .img2 {
+            left: -40px;
+        }
+    }
+}
+
+/* Why v4 -------------------------------------------*/ 
+.why-circle {
+    width: 491px;
+    height: 491px;
+    border: 1px solid $theme-color;
+    border-radius: 9999px;
+    display: grid;
+    align-content: center;
+    padding: 50px;
+    .skill-feature {
+        max-width: 351px;
+    }
+    .box-title {
+        margin-bottom: 23px;
+    }
+    &.right {
+        padding-left: 90px;
+    }
+    @include lg {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include xs {
+        width: 100%;
+        height: auto;
+        padding: 30px !important;
+        border-radius: 10px;
+    }
+    @include vxs {
+        padding: 20px !important;
+    }
+}
+
+.skill-feature {
+    &.style3 {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+        .skill-feature_title, 
+        .progress-value {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .progress {
+            height: 4px;
+            border: none;
+            background-color: $border-color;
+        }
+        .progress-bar {
+            height: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.double-img {
+    position: relative;
+    z-index: 3;
+    margin-left: -94px;
+    .img1,
+    .img2 {
+        border-radius: 999px;
+        width: 385px;
+        height: 385px;
+        img {
+            width: 100%;
+            border-radius: inherit;
+        }
+    }
+    .img2 {
+        margin-top: -110px;
+        img {
+            border-top: 5px solid $white-color;
+        }
+    }
+}
+@include xl {
+    .double-img {
+        margin-left: -66px;
+        .img1,
+        .img2 {
+            width: 340px;
+            height: 340px;
+        }
+    }
+}
+
+@include lg {
+    .double-img {
+        margin: -60px auto;
+        display: flex;
+        justify-content: center;
+        .img1,
+        .img2 {
+            width: 400px;
+            height: auto;
+        }
+        .img2 {
+            margin-top: 0;
+            margin-left: -100px;
+            img {
+                border-top: none;
+                border-left: 5px solid $white-color;
+            }
+        }
+    }
+}
+
+@include xs {
+    @include lg {
+        .double-img {
+            margin: 20px auto;
+        }
+    }
+}
+
+.circle-counter {
+    &-wrap {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        gap: 55px 30px;
+        @include xs {
+            gap: 30px;
+        }
+    }
+    .box-number {
+        font-size: 44px;
+        color: $theme-color;
+        margin-bottom: 0px;
+        margin-top: -0.28em;
+    }
+}
+
+/* Why v5 -----------------------------*/
+.tab-menu1 {
+    &.style2 {
+        margin-bottom: 30px;
+        width: 100%;
+        .tab-btn {
+            color: $white-color;
+            flex: 1;
+            @include xs {
+                line-height: 1.3;
+                padding: 10px;
+            }
+        }
+        .indicator {
+            background-color: rgba($color: #BA8756, $alpha: 0.3);
+        }
+    }
+}
+
+.feature-box {
+    &.style2 {
+        background-color: rgba($color: #FFFFFF, $alpha: 0.2);
+        box-shadow: none;
+        .box-title {
+            color: $white-color;
+        }
+        .feature-box {
+            &_text {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+@include lg {
+    .mission-tab {
+        text-align: center;
+    }
+}
+
+////-----------------------------------
+.gallery-card {
+    position: relative;
+    .box-img {
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: $title-color;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.4s ease-in-out;
+            transform: scaleX(0);
+        }
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .icon-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 50%;
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $white-color;
+        transition: 0.4s ease-in-out;
+        z-index: 3;
+        &:hover {
+            background-color: $title-color;
+            border-color: $title-color;
+        }
+    }
+    &:hover {
+        .box-img {
+            &:after {
+                opacity: 0.6;
+                transform: scaleX(1);
+            }
+            img {
+                transform: scale(1.1);
+            }
+        }
+        .icon-btn {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+//-------------------------------------
+.contact-sec2 {
+    .call-icon {
+        background-color: $white-color;
+        padding: 35px 0;
+    }
+    .title-area2 {
+        padding: 35px;
+    }
+    .title {
+        max-width: 470px;
+    }
+}
+
+//-------------------------------------
+.brand-sec4 {
+    background-color: $title-color;
+    margin-top: -500px;
+    @include xxl {
+        margin-top: 0;
+    }
+    .brand-box {
+        padding: 65px 0;
+        @include ml {
+            padding: 45px 0;
+        }
+    }
+}
+.brand-title4 {
+    font-size: 74px;
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    padding: 24px 3%;
+    margin-bottom: -230px;
+    color: rgba($color: #fff, $alpha: 0.1);
+    @include xxl {
+        display: none;
+    }
+}
+
+//--------------------------------------
+.faq-area {
+    position: relative;
+    border: 1px solid $border-color;
+    background-color: $white-color;
+    padding: 60px;
+    &:before,
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        left: 0;    
+    }
+    &:before {
+        top: 0;
+        border-width: 245px 245px 0 0;
+        border-color: $smoke-color2 transparent transparent transparent;
+        
+    }
+    &:after {
+        bottom: 0;
+        border-width: 245px 0 0 245px;
+        border-color: transparent transparent transparent $smoke-color2;
+    }
+}
+@include xl {
+    .faq-area {
+        padding: 40px;
+        &:before {
+            border-width: 200px 200px 0 0;
+            
+        }
+        &:after {
+            border-width: 200px 0 0 200px;
+        }
+    }
+}
+
+@include lg {
+    .faq-area {
+        text-align: center;
+        .accordion-card {
+            text-align: left;
+        }
+        &:after {
+            border-width: 0 200px 200px 0;
+            border-color: transparent $smoke-color2 transparent transparent;
+            top: 0;
+            right: 0;
+            left: unset;
+        }
+    }
+}
+
+@include xs {
+    .faq-area {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .img-box12 {
+        margin-right: 30px;
+    }
+}
+.img-box12 {
+    position: relative;
+    z-index: 3;
+    background-color: $smoke-color2;
+    border: 20px solid $white-color;
+    max-width: 530px;
+}
+
+@include lg {
+    .img-box12 {
+        max-width: 100%;
+        text-align: center;
+        box-shadow: 0px 6px 30px rgba(192, 192, 192, 0.15);
+    }
+}
+
+@include xs {
+    .img-box12 {
+        border: 10px solid $white-color;
+    }
+}
+
+// Cta v2 -----------------------------------------------
+.cta-sec2 {
+    background-size: 1690px calc(100% - 95px);
+    background-position: bottom left;
+    position: relative;
+    padding-top: 95px;
+    margin-top: -50px;
+    overflow: hidden;
+    @include hd {
+        background-position: center center;
+    }
+    .cta-img3 {
+        width: 517px;
+        position: absolute;
+        bottom: 0;
+        left: 1173px;
+        img {
+            width: 100%;
+        }
+        @include hd {
+            left: calc(83% - 517px);
+        }
+        @include xxl {
+            left: unset;
+            right: 0;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    @include lg {
+        margin-top: 0;
+        padding-top: 0;
+        background-size: cover;
+    }
+}

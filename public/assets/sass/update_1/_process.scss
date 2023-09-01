@@ -1,0 +1,61 @@
+/* Process Grid ------------------------------------*/
+.process-grid {
+    background-color: $white-color;
+    box-shadow: -6px 6px 30px rgba(192, 192, 192, 0.2);
+    padding: 40px;
+    .box-number {
+        font-size: 18px;
+        font-weight: 600;
+        color: $theme-color;
+        background-color: #F7F2ED;
+        height: 46px;
+        width: 46px;
+        line-height: 46px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    @include lg {
+        text-align: center;
+        .box-number {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @include vxs {
+        padding: 40px 20px;
+    }
+}
+
+.process-grid-line {
+    border-top: 1px dashed $theme-color;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    max-width: 844px;
+    margin: 0 auto 15px auto;
+    @include md {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .dot {
+        height: 30px;
+        width: 30px;
+        border-radius: 99px;
+        background-color: rgba($color: #FF9D15, $alpha: 0.3);
+        position: relative;
+        transform: translateY(-15px);
+        &:first-child {
+            margin-left: -15px;
+        }
+        &:last-child {
+            margin-right: -15px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            background-color: $theme-color;
+            border-radius: inherit;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.main-menu {
+    a {
+        .new-label {
+            font-size: 12px;
+            padding: 0px 5px 2px 5px;
+            margin-left: 4px;
+            border-radius: 4px;
+            background-color: $theme-color;
+            color: $white-color;
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+/* Header 5 -------------------------------------------*/ 
+.header-layout5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .main-menu {
+        margin-left: 30px;
+        > ul > li > a {
+            padding: 15px 0;
+            color: $white-color;
+            font-weight: 400;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .menu-area {
+        background-color: #2A2F3C;
+    }
+    .header-button {
+        .icon-btn {
+            --btn-size: 40px;
+            font-size: 16px;
+            line-height: 38px;
+            background-color: transparent;
+            color: $white-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .header-info {
+        &-wrap {
+            &:not(:last-child) {
+                border-right: 1px solid #353B4B;
+                padding-right: 30px;
+                margin-right: 25px;
+            }
+        }
+        &_link {
+            color: #B2B2B2;
+        }
+        .icon-btn {
+            background-color: transparent;
+            border-color: #353B4B;
+        }
+    }
+}
+
+@include lg {
+    .header-layout5 {
+        .header-info-wrap {
+            &:first-of-type {
+                display: none;
+            }
+        }
+        .header-button {
+            padding-right: 30px;
+            .themeholy-btn {
+                display: none;
+            }
+        }
+    }
+}
+
+@include md {
+    .header-layout5 {
+        .header-info-wrap {
+            display: none;
+        }
+    }
+}
+
+/* Header 1.1 -------------------------------------------*/ 
+.header-layout1-1 {
+    .main-menu {
+        margin-left: 30px;
+    }
+}

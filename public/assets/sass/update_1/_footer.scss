@@ -1,0 +1,57 @@
+/* Footer v3 -------------------------------------*/
+.footer-menu-logo {
+    --border-color: #3D4250;
+    text-align: center;
+    margin-top: $space;
+    .footer-logo {
+        margin-bottom: 40px;
+    }
+    @include md {
+        margin-top: $space-mobile;
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.footer-menu {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        border-left: 1px solid $border-color;
+        border-top: 1px solid $border-color;
+    }
+    li {
+        color: $body-color;
+        font-size: 18px;
+        font-family: $title-font;
+        flex: 1;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 15px 10px;
+        @include md {
+            font-size: 16px;
+            padding: 10px 8px;
+        }
+        a {
+            color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+@include sm {
+    .footer-menu {
+        ul {
+            flex-wrap: wrap;
+            
+        }
+        li {
+            flex: 100px;
+        }
+    }
+}

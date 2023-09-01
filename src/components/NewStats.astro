@@ -1,0 +1,64 @@
+---
+let stats = [
+{
+      "count": "15000",
+      "symbol": "+",
+      "text": "Visitors"
+    },
+    {
+      "count": "5000",
+      "symbol": "+",
+      "text": "Startups"
+    },
+    {
+      "count": "400",
+      "symbol": "+",
+      "text": "HNIs"
+    },
+    {
+      "count": "300",
+      "symbol": "+",
+      "text": "Mentors"
+    },
+    {
+      "count": "200",
+      "symbol": "+",
+      "text": "Corporates"
+    },
+    
+    {
+      "count": "150",
+      "symbol": "+",
+      "text": "Investors"
+    },
+   
+    {
+      "count": "150",
+      "symbol": "+",
+      "text": "Speakers"
+    },
+    {
+      "count": "100",
+      "symbol": "+",
+      "text": "Exhibitors"
+    },
+    
+    
+  ];
+
+---
+<div class="flex flex-wrap gap-2 items-center justify-center row themeholy-carousel" id="brandSlide1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="3" data-xs-slide-show="2">
+    {stats.map((item) => (
+      <div class="h-36 w-32 relative text-center text-white flex flex-col  items-center justify-center animate__animated animate__jackInTheBox">
+        <div class="flex justify-center items-center relative z-10 top-1/3">
+          <div class="text-3xl font-black text-white md:text-4xl">{item.count}</div>
+          <div class="mb-3 text-xl text-white md:text-xl">{item.symbol}</div>
+        </div>
+        <div class="text-center text-yellow-400 uppercase relative z-10 bottom-2 top-1/3">{item.text}</div>
+  
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 transform w-36 rounded-lg">
+          <img src="/assets/img/brand/icon_white_filled.svg" alt="">
+        </div>
+      </div>
+    ))}
+  </div>

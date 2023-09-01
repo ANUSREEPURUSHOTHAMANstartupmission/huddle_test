@@ -1,0 +1,139 @@
+---
+const { title } = Astro.props;
+
+import Navbar from "../components/Navbar.astro";
+
+const description = "Kerala Startup Mission is the central agency of the Government of Kerala for entrepreneurship development and incubation activities in Kerala, India.";
+const url = "https://startupmission.kerala.gov.in/";
+
+---
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Huddle Global 2023</title>
+    <meta name="author" content="Plumer">
+    <meta name="description" content="Plumer - Plumbing & Repair HTML Template">
+    <meta name="keywords" content="Plumer - Plumbing & Repair HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="/assets/css/slick.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet"> 
+        <style is:global>
+			@font-face {
+					font-family: 'selimaregular';
+					src: url('/font/selima_-webfont.woff2') format('woff2'),
+							url('/font/selima_-webfont.woff') format('woff');
+					font-weight: normal;
+					font-style: normal;
+			}
+
+			@font-face {
+				font-family: 'tajur_puncakregular';
+				src: url('/font/tajur_puncak-webfont.woff2') format('woff2'),
+						url('/font/tajur_puncak-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+
+		</style>
+		
+</head>
+
+<body>
+    
+		<Navbar></Navbar>
+		<slot />
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!--==============================
+    All Js File
+============================== -->
+
+<script is:inline>
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 100) {
+            document.querySelector("#navbartest").classList.add('sm:block')
+            document.querySelector("#navbartest").classList.remove('hidden')
+        } else {
+            document.querySelector("#navbartest").classList.remove('sm:block')
+            document.querySelector("#navbartest").classList.add('hidden')
+        }
+    }, false);
+
+</script>
+    <!-- Jquery -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js" is:inline></script>
+    <!-- Slick Slider -->
+    <script src="/assets/js/slick.min.js" is:inline></script>
+    <!-- Bootstrap -->
+    <script src="/assets/js/bootstrap.min.js" is:inline></script>
+    <!-- Magnific Popup -->
+    <script src="/assets/js/jquery.magnific-popup.min.js" is:inline></script>
+    <!-- Counter Up -->
+    <script src="/assets/js/jquery.counterup.min.js" is:inline></script>
+    <!-- Range Slider -->
+    <script src="/assets/js/jquery-ui.min.js" is:inline></script>
+    <!-- Isotope Filter -->
+    <script src="/assets/js/imagesloaded.pkgd.min.js" is:inline></script>
+    <script src="/assets/js/isotope.pkgd.min.js" is:inline></script>
+
+    <!-- Main Js File -->
+    <script src="/assets/js/main.js" is:inline></script>
+</body>
+
+</html>
